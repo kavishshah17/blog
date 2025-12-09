@@ -65,19 +65,34 @@ body.dark .nav-logo-img {
   mix-blend-mode: screen; 
 }
 
-.main-nav { display: flex; gap: 20px; }
-.main-nav a { color: var(--text-light); font-size: 0.95rem; }
-.main-nav a:hover, .main-nav a.active { color: var(--primary); text-decoration: none; }
+.main-nav { 
+    display: flex; 
+    gap: 20px; /* Spacing between links */
+}
+.main-nav a { 
+    color: var(--text-light); 
+    font-size: 0.95rem; 
+}
+.main-nav a:hover, .main-nav a.active { 
+    color: var(--primary); 
+    text-decoration: none; 
+}
 
 .theme-toggle {
   background: none; border: none; cursor: pointer;
   font-size: 1.2rem; color: var(--text-color);
 }
 
-/* Mobile Nav */
+/* Mobile Nav Adjustment for fewer links */
 @media (max-width: 768px) {
-  .nav-inner { flex-direction: column; gap: 15px; }
-  .main-nav { flex-wrap: wrap; justify-content: center; }
+  .nav-inner { 
+      flex-direction: column; 
+      gap: 15px; 
+  }
+  .main-nav { 
+      flex-wrap: wrap; 
+      justify-content: center; 
+  }
 }
 
 /* --- BLOG SPECIFIC STYLES --- */
