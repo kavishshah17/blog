@@ -1,101 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Blog · Kavish Shah</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="blog_style.css" /> 
+  <meta charset="UTF-8" />
+  <title>Blog · Kavish Shah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="blog_style.css" /> 
 </head>
 <body id="top">
-  
-  <header class="top-nav">
-    <div class="container nav-inner">
-      <div class="logo">
-        <a href="https://kavishshah17.github.io/" class="logo-link">
-          <img src="KS.png" alt="Kavish Shah Logo" class="nav-logo-img" />
-        </a>
-      </div>
+  
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <div class="logo">
+        <a href="https://kavishshah17.github.io/" class="logo-link">
+          <img src="KS.png" alt="Kavish Shah Logo" class="nav-logo-img" />
+        </a>
+      </div>
 
-      <nav class="main-nav">
-        <a href="#" class="active">Blog</a> 
-        <a href="https://kavishshah17.github.io/" target="_blank">Portfolio</a>
-      </nav>
+      <nav class="main-nav">
+        <a href="#" class="active">Blog</a> 
+        <a href="https://kavishshah17.github.io/" target="_blank">Portfolio</a>
+      </nav>
 
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
-    </div>
-  </header>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
 
-  <main>
-    <section class="section">
-      <div class="container">
-        
-        <div class="blog-header">
-          <h1>Insights & Analysis</h1>
-          <p class="section-lead">
-            Thoughts on data strategy, analytics engineering, and solving complex business problems.
-          </p>
-        </div>
+  <main>
+    <section class="section">
+      <div class="container">
+        
+        <div class="blog-header">
+          <h1>Insights & Analysis</h1>
+          <p class="section-lead">
+            Thoughts on data strategy, analytics engineering, and solving complex business problems.
+          </p>
+        </div>
 
-        <div class="blog-grid">
-          
-          <article class="blog-card">
-            <span class="blog-date">Coming Soon</span>
-            <h3>Optimizing Supply Chains with Python</h3>
-            <p>
-              How I reduced processing errors by 30% using iterative process flow mapping and custom Python scripts for data validation.
-            </p>
-            <a href="#" class="read-more">Read Article →</a>
-          </article>
+        <div class="blog-grid">
+          
+          <article class="blog-card">
+            <span class="blog-date">Coming Soon</span>
+            <h3>Optimizing Supply Chains with Python</h3>
+            <p>
+              How I reduced processing errors by 30% using iterative process flow mapping and custom Python scripts for data validation.
+            </p>
+            <a href="#" class="read-more">Read Article →</a>
+          </article>
 
-          <article class="blog-card">
-            <span class="blog-date">Coming Soon</span>
-            <h3>The Financial Impact of Data Accuracy</h3>
-            <p>
-              Why data cleaning isn't just a technical task—it's a financial necessity. A deep dive into how bad data affects P&L statements.
-            </p>
-            <a href="#" class="read-more">Read Article →</a>
-          </article>
+          <article class="blog-card">
+            <span class="blog-date">Coming Soon</span>
+            <h3>The Financial Impact of Data Accuracy</h3>
+            <p>
+              Why data cleaning isn't just a technical task—it's a financial necessity. A deep dive into how bad data affects P&L statements.
+            </p>
+            <a href="#" class="read-more">Read Article →</a>
+          </article>
 
-          <article class="blog-card">
-            <span class="blog-date">Coming Soon</span>
-            <h3>Tableau vs Power BI: A Business Perspective</h3>
-            <p>
-              Comparing the two giants not by features, but by how stakeholders consume the data. Which one tells a better story?
-            </p>
-            <a href="#" class="read-more">Read Article →</a>
-          </article>
+          <article class="blog-card">
+            <span class="blog-date">Coming Soon</span>
+            <h3>Tableau vs Power BI: A Business Perspective</h3>
+            <p>
+              Comparing the two giants not by features, but by how stakeholders consume the data. Which one tells a better story?
+            </p>
+            <a href="#" class="read-more">Read Article →</a>
+          </article>
 
-        </div>
-      </div>
-    </section>
-  </main>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> · Kavish Shah · Blog</span>
-      <a href="https://kavishshah17.github.io/">Back to Portfolio</a>
-    </div>
-  </footer>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> · Kavish Shah · Blog</span>
+      <a href="https://kavishshah17.github.io/">Back to Portfolio</a>
+    </div>
+  </footer>
 
-  <script>
-    // Year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
+  <script>
+    // Year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Theme toggle logic (matches main portfolio)
-    const toggle = document.getElementById("theme-toggle");
-    
-    // Check local storage
-    if (localStorage.getItem("theme") === "dark") {
-      document.body.classList.add("dark");
-      toggle.textContent = "☀️";
-    }
+    // Theme toggle logic (matches main portfolio)
+    const toggle = document.getElementById("theme-toggle");
+    
+    // Check local storage
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+      toggle.textContent = "☀️";
+    }
 
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-      const isDark = document.body.classList.contains("dark");
-      toggle.textContent = isDark ? "☀️" : "🌙";
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-    });
-  </script>
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      const isDark = document.body.classList.contains("dark");
+      toggle.textContent = isDark ? "☀️" : "🌙";
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+  </script>
 </body>
 </html>
