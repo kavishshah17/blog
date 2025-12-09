@@ -1,4 +1,4 @@
-/* --- CORE VARIABLES (Identical to Portfolio) --- */
+/* --- CORE VARIABLES --- */
 :root {
   --bg-color: #ffffff;
   --bg-alt: #f7f9fc;
@@ -41,66 +41,52 @@ a:hover { text-decoration: underline; }
 .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 .section { padding: 60px 0; flex: 1; }
 
-/* --- HEADER & NAV (Menu Size Adjustment) --- */
+/* --- HEADER & NAV (Compact Size) --- */
 .top-nav {
   position: sticky;
   top: 0;
   background-color: var(--bg-color); 
   border-bottom: 1px solid var(--border);
   z-index: 1000;
-  padding: 10px 0; /* REDUCED PADDING for smaller menu bar */
+  padding: 10px 0; /* Keeps menu small */
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; }
 
-/* Logo Styles + Dark Mode Fix */
+/* Logo Styles */
 .nav-logo-img {
-  height: 30px; /* REDUCED LOGO SIZE */
+  height: 30px; /* Smaller Logo */
   width: auto;
   object-fit: contain;
   display: block;
   transition: filter 0.3s;
+  cursor: pointer;
 }
+.logo-link {
+  display: block;
+  z-index: 1001;
+}
+
+/* Dark Mode Logo Fix */
 body.dark .nav-logo-img {
   filter: invert(1);
   mix-blend-mode: screen; 
 }
 
-.main-nav { 
-    display: flex; 
-    gap: 15px; /* Reduced gap slightly */
-}
-.main-nav a { 
-    color: var(--text-light); 
-    font-size: 0.9rem; /* Slightly smaller font */
-    padding: 5px 0; /* Reduced vertical padding */
-}
-.main-nav a:hover, .main-nav a.active { 
-    color: var(--primary); 
-    text-decoration: none; 
-}
+.main-nav { display: flex; gap: 20px; }
+.main-nav a { color: var(--text-light); font-size: 0.95rem; }
+.main-nav a:hover, .main-nav a.active { color: var(--primary); text-decoration: none; }
 
 .theme-toggle {
   background: none; border: none; cursor: pointer;
-  font-size: 1.1rem; /* Slightly smaller toggle icon */
-  color: var(--text-color);
+  font-size: 1.2rem; color: var(--text-color);
 }
 
 /* Mobile Nav */
 @media (max-width: 768px) {
-  .top-nav {
-    padding: 10px 0;
-  }
-  .nav-inner { 
-      flex-direction: column; 
-      gap: 10px; 
-  }
-  .main-nav { 
-      flex-wrap: wrap; 
-      justify-content: center; 
-  }
+  .nav-inner { flex-direction: row; justify-content: space-between; }
 }
 
-/* --- BLOG SPECIFIC STYLES --- */
+/* --- BLOG STYLES --- */
 .blog-header {
   margin-bottom: 50px;
   border-bottom: 1px solid var(--border);
@@ -179,4 +165,12 @@ body.dark .nav-logo-img {
   color: var(--text-light);
   margin-top: auto;
 }
-.footer-inner { display: flex; justify-content: space-between; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; }
+
+/* Back to Portfolio Link Style */
+.back-link {
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 10;
+}
